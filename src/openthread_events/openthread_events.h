@@ -11,9 +11,6 @@
 #include <openthread/ip6.h>  
 #include"../utils/utils.h"
 
-
-
-
 /**
  * @brief OpenThread olay is parcacigi yigin boyutu (bayt).
  */
@@ -23,22 +20,6 @@
  */
 #define OPENTHREAD_EVENTS_THREAD_PRIORITY      7
 
-/**
- * @brief Test/ornek is parcacigi yigin boyutu (bayt).
- */
-#define OPENTHREAD_EVENTS_TEST_THREAD_STACK_SIZE   2048
-/**
- * @brief Test/ornek is parcacigi onceligi.
- */
-#define OPENTHREAD_EVENTS_TEST_THREAD_PRIORITY      4
-
-
-/**
- * @brief OpenThread mesaj sarmalayıcısı.
- */
-
-
-
 
 /**
  * @brief Kaynak URI yolu.
@@ -47,14 +28,6 @@ typedef enum {
     DEVICE_DATA = 0, /*!< Cihaz verisi */
     HEALTH = 1       /*!< Sağlık bilgisi */
 } coap_uri_path_t;
-
-
-
-
-
-
-
-
 
 
 /**

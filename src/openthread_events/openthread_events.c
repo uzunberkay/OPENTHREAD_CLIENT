@@ -5,10 +5,8 @@
 LOG_MODULE_REGISTER(openthread_events, LOG_LEVEL_DBG);
 
 
-otError openthread_multicast_send(const uint8_t* cmd, uint16_t size,const char* ipaddr);
 static otError openthread_coap_send_message(const coap_uri_path_t uri_path,const uint8_t* msg , uint16_t *buffer_index, const otCoapType a_type, const otCoapCode a_code ,const char* ipaddr);
 static void state_changed_callback(uint32_t flags, void *context);
-static void ip6_address_callback(const otIp6AddressInfo *address_info, bool is_added, void *context);
 
 otExtAddress device_mac_addr = {0};
 
@@ -304,7 +302,7 @@ const char* get_uri_path(coap_uri_path_t uri_path)
  */
 static otError openthread_coap_send_message(const coap_uri_path_t uri_path,const uint8_t* msg , uint16_t *buffer_index, const otCoapType a_type, const otCoapCode a_code ,const char* ipaddr)
 {
-    LOG_WRN("CoAP mesaji hazirlaniyor");
+    LOG_DBG("CoAP mesaji hazirlaniyor");
     if (msg == NULL || buffer_index == NULL || *buffer_index == 0 ) {
         LOG_ERR("Gecersiz parametre: msg/buffer_index hatali");
         return OT_ERROR_INVALID_ARGS;
