@@ -1,6 +1,13 @@
-## OPENTHREAD_CLIENT
+# OPENTHREAD_SERVER
 
-Kısaca: Zephyr RTOS üzerinde nRF52840 ile OpenThread MTD çalıştıran bir CoAP istemcisidir; belirlenen sunucuya periyodik CoAP mesajı gönderir ve cihaz rol değişimlerini loglar.
+Bu proje, Zephyr RTOS üzerinde nRF52840 ile **OpenThread FTD ve CoAP sunucusu** çalıştırır.  
+CoAP isteklerini karşılar, mesajları kuyruklar ve loglar.  
 
-Sunucu tarafı proje: `OPENTHREAD_SERVER` (CoAP isteklerini karşılar, mesajları kuyruklar ve loglar).
+`OPENTHREAD_CLIENT` ile birlikte client-server demo sistemi oluşturur.
 
+### Örnek Log Çıktısı (Gelen CoAP Mesajı)
+```text
+[00:01:27.178,436] <inf> openthread_events: CoAP istegi alindi
+[00:01:27.178,466] <inf> openthread_events: Kaynak: fdde:ad00:beef:0:7a70:6363:7820:cea1: PORT: 5683
+[00:01:27.178,527] <inf> openthread_events: Hedef:  fdde:ad00:beef:0:9da4:4886:f1a9:824e: PORT: 5683
+[00:01:27.178,558] <inf> openthread_events: Mesaj: Merhaba OpenThread
