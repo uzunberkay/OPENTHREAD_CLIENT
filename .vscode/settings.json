@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "openthread_events.h": "c",
+        "utils.h": "c"
+    }
+}
